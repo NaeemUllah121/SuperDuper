@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_homep"
+        android:title="Home" />
+
+  <!--  <item
+        android:id="@+id/elearn"
+        android:icon="@drawable/ic_elearn1"
+        android:title="Learn" />-->
+
+    <!--<item
+        android:id="@+id/tech_club"
+        android:icon="@drawable/ic_tech_club"
+        android:title="Tech Club" /> -->
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notifications" />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
+
+    <item
+        android:id="@+id/invite"
+        android:icon="@drawable/ic_inviteshare"
+        android:title="Invite" />
+    <!--<item
+        android:id="@+id/membership"
+        android:icon="@drawable/ic_membship"
+        android:title="Membership" />-->
+  <!--  <item
+        android:id="@+id/dakiya"
+        android:icon="@drawable/ic_dakiya"
+        android:title="Delivery" />-->
+
+    <!--<item
+       android:id="@+id/delivery"
+       android:icon="@drawable/ic_dakiya"
+       android:title="Learn" />-->
+
+<!--  <item
+       android:id="@+id/draw"
+       android:icon="@drawable/ic_draw"
+       android:title="Draw" />-->
+
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/ic_read_more"
+        android:title="More" />
+
+</menu>

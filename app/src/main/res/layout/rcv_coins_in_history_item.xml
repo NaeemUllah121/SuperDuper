@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="6dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/arrowRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+        <ImageView
+            android:id="@+id/arrowGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_arrow_downward_24" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                />
+            <TextView
+                android:id="@+id/sysId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="sysId"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pointsIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="pointsIn"
+            android:layout_gravity="center"
+            android:textColor="#4CAF50"/>
+        <TextView
+            android:id="@+id/pointsOut"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="pointsOut"
+            android:textColor="#FF5037"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginVertical="4dp"
+        android:background="#16000000" />
+</LinearLayout>

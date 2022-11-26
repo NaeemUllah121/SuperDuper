@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Cart.CartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secondary">
+
+            <ImageView
+                android:id="@+id/btn_backCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="btn_back_cart"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btn_back"/>
+
+            <TextView
+                android:id="@+id/house_header_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/cabin"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Cart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/itemInCart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lay1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/lay_placeOrder"
+                android:layout_marginBottom="3dp"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lay_placeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:cardCornerRadius="@dimen/_4sdp"
+                app:cardElevation="@dimen/_3sdp"
+                app:cardUseCompatPadding="true">
+
+
+
+                <LinearLayout
+                    android:id="@+id/lay_placeOrderr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">android:background="#0F3F51B5"
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_total2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Total: Rs. "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="#77000000" />
+
+                        <TextView
+                            android:id="@+id/tv_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:text="0"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/secondary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:onClick="btn_Checkout"
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/style_round_btm_left"
+                        android:orientation="horizontal">style="@style/Widget.AppCompat.ImageButton"
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CHECKOUT"
+                            android:textColor="@color/white"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_checkout"
+                            android:scaleType="fitCenter"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            app:tint="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/noItemInCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="There are no items in this cart!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <!--<Button
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:onClick="btn_ContinueShopping"
+                android:paddingHorizontal="@dimen/_60sdp"
+                android:paddingVertical="@dimen/_9sdp"
+                android:text="Continue Shopping"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                app:backgroundTint="#17FE5722"
+                app:elevation="@dimen/_5sdp"
+                app:rippleColor="@color/primary"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="0.5dp" />-->
+            <Button
+                android:id="@+id/btn_ContinueShopping"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:onClick="btn_ContinueShopping"
+                android:text="Continue Shopping"
+                android:textAllCaps="false"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/secondary"
+                app:backgroundTint="@color/secondaryLite"
+                app:elevation="@dimen/_5sdp"
+                app:rippleColor="@color/secondary"
+                app:strokeColor="@color/secondary"
+                app:strokeWidth="0.6dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

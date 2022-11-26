@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CategoryListCompanyWise.CategoryListActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/secondary"
+        android:gravity="center"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/btn_back_eLearn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="btn_back"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_btn_back"
+             />
+
+        <TextView
+            android:id="@+id/header_detail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:fontFamily="@font/cabin"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Category List"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/white"
+
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="btn_search"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            android:src="@drawable/ic_search"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laySearch"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/secondary"
+        android:gravity="center"
+        android:visibility="gone"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="btn_SearchBack"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_btn_back" />
+
+        <EditText
+            android:id="@+id/SearchCompanyList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="#00000000"
+            android:fontFamily="@font/cabin"
+            android:hint="Search..."
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_8sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/white"
+            android:textColorHint="#7EFFFDFD"
+            android:textCursorDrawable="@null" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="btn_close"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/topLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/noimgg" />
+                app:civ_border_color="#32000000"
+                app:civ_border_width="0.1dp"
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lay_banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_135sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/no_image_banner"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/CategoryListCompanyWiseRcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noItemInCategoryList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coming Soon...!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <Button
+            android:id="@+id/btn_ContinueShopping"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/_3sdp"
+            android:onClick="btn_ContinueShopping"
+            android:padding="@dimen/_8sdp"
+            android:text="Continue Shopping"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary"
+            app:backgroundTint="@color/secondaryLite"
+            app:elevation="@dimen/_5sdp"
+            app:rippleColor="@color/secondary"
+            app:strokeColor="@color/secondary"
+            app:strokeWidth="0.6dp" />
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

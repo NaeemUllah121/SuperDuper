@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Redeem.RedeemHistoryActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:onClick="btn_back"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_btn_back"
+        app:tint="@color/secondary" />
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/lay1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/secondary">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:onClick="btn_back"-->
+<!--            android:padding="@dimen/_8sdp"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/ic_btn_back" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/house_header_detail"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:fontFamily="@font/lato_bold"-->
+<!--            android:gravity="center"-->
+<!--            android:maxLines="1"-->
+<!--            android:text="Redeem"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold">-->
+
+<!--        </TextView>-->
+
+<!--    </RelativeLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:transitionName="transition_lg_email_pass"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/black"
+            app:tabMode="fixed"
+            app:tabIndicatorHeight="3dp"
+            app:tabPaddingBottom="8dp"
+            app:tabPaddingTop="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#16000000"
+            app:layout_constraintBottom_toBottomOf="@id/tab_layout" />
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/tab_view_pager"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+            android:layout_height="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:scrollbars="none">-->
+
+<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:focusableInTouchMode="true"-->
+<!--            android:orientation="vertical">-->
+
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/_5sdp"-->
+<!--                android:layout_marginTop="@dimen/_5sdp"-->
+<!--                android:visibility="gone"-->
+<!--                app:cardCornerRadius="@dimen/_4sdp"-->
+<!--                app:cardElevation="@dimen/_2sdp"-->
+<!--                app:cardUseCompatPadding="true">-->
+
+<!--                <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingVertical="@dimen/_4sdp">-->
+
+<!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingVertical="@dimen/_8sdp">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                            android:layout_width="25dp"-->
+<!--                            android:layout_height="25dp"-->
+<!--                            android:src="@drawable/ic_totalcoinss" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/tv_availableCoins"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="bottom"-->
+<!--                            android:layout_marginStart="@dimen/_4sdp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="0"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_4sdp"-->
+<!--                            android:text="coins"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />-->
+
+
+<!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--                    <View-->
+<!--                        android:layout_width="0.5dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="@color/iconsColor" />-->
+
+<!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingVertical="@dimen/_8sdp">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                            android:layout_width="25dp"-->
+<!--                            android:layout_height="25dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/ic_wallettt" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/tv_availableBalance"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_4sdp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="0"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_4sdp"-->
+<!--                            android:text="rupees"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />-->
+
+<!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--                    <View-->
+<!--                        android:layout_width="0.5dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="@color/iconsColor" />-->
+
+<!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingVertical="@dimen/_8sdp">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                            android:layout_width="25dp"-->
+<!--                            android:layout_height="25dp"-->
+<!--                            android:src="@drawable/ic_coupon" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/tv_availableCoupns"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_4sdp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="0"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_4sdp"-->
+<!--                            android:text="coupons"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />-->
+<!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+<!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="@dimen/_10sdp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/view_generateCoupon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:cardCornerRadius="@dimen/_10sdp"-->
+<!--                    android:onClick="btn_generateCoupon"-->
+<!--                    app:cardElevation="@dimen/_2sdp"-->
+<!--                    app:cardUseCompatPadding="true">-->
+
+<!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                        android:layout_width="@dimen/_130sdp"-->
+<!--                        android:layout_height="@dimen/_80sdp"-->
+<!--                        android:background="@color/grayLite"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingHorizontal="@dimen/_10sdp"-->
+<!--                        android:paddingVertical="@dimen/_10sdp">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/ic_couponbtn" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:autoSizeStepGranularity="2sp"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:fontFamily="@font/lato"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Generate coupon"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            app:autoSizeTextType="uniform" />-->
+<!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:cardCornerRadius="@dimen/_8sdp"-->
+<!--                    app:cardElevation="@dimen/_2sdp"-->
+<!--                    app:cardUseCompatPadding="true">-->
+
+<!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                        android:layout_width="@dimen/_130sdp"-->
+<!--                        android:layout_height="@dimen/_80sdp"-->
+<!--                        android:background="@color/grayLite"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingHorizontal="@dimen/_10sdp"-->
+<!--                        android:paddingVertical="@dimen/_10sdp">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/ic_cashbtn" />-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:autoSizeStepGranularity="2sp"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:fontFamily="@font/lato"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Cash out"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            app:autoSizeTextType="uniform" />-->
+<!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_5sdp"-->
+<!--                    android:fontFamily="@font/lato_bold"-->
+<!--                    android:text="Coins History"-->
+<!--                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                    android:textColor="@color/black" />-->
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/rcv_coinsHistory"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+
+
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

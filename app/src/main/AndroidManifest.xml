@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zasa.superduper">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="com.zasa.superduper.Utils.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LoyaltyBunch"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.zasa.superduper.NotificationsActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.zasa.superduper.MoreActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.zasa.superduper.IntviteActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.zasa.superduper.Redeem.CouponActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.Redeem.RedeemHistoryActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.Profile.AccountActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.DonationVerification.DonationVerificationActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.HotelAccommodation.HotelAccommodationActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.MembershipUpgradeActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.MembershipInfoActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.ForgetPass.ForgetPassActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.CompanyCategoryListTypeWiseS.SelectCategoryActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.DonationActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.zasa.superduper.TechClub.ELearningActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.TechClub.TechAppointmentActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.TechClub.TechEventsActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.TechClub.SeeAllMembersActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.FAQs.FAQsActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.ContactUsActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.CourierService.DakiyaActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.CompanyListCategoryWiseS.CompanyListCategoryWiseActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.CourierService.DeliveryRequestHistoryActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.WasteMaterialRequestHistory.MaterialRequestHistoryActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.WasteMaterialRequestSubmit.SaveEarthActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.WasteMaterialScanner.ScannerViewActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.SubmitGeneralOrder.CheckoutActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.BuyItemDetails.BuyItemActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.CategoryListCompanyWise.CategoryListActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.SeeAllCategory.SeeAllCategoryActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.Profile.ProfileActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.Home.WebViewActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.CompanyListTypeWise.CompanyListActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.zasa.superduper.eLearn.YTCoursePlaylistActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.eLearn.YTPlayVideoActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name="com.zasa.superduper.eLearn.LanguageDetailsActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.zasa.superduper.eLearn.LanguagesActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.zasa.superduper.Cart.CartActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.zasa.superduper.RegisterUser.RegisterActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name="com.zasa.superduper.Login.LoginActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name="com.zasa.superduper.Splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zasa.superduper.HomeActivity"
+            android:theme="@style/NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/AdMod_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

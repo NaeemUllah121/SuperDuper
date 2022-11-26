@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CompanyListTypeWise.CompanyListActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_membership"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secondary"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/btn_back_eLearn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="btn_back"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btn_back" />
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Company List"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="btn_search"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/laySearch"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secondary"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="btn_SearchBack"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btn_back" />
+
+            <EditText
+                android:id="@+id/SearchCompanyList"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#00000000"
+                android:fontFamily="@font/cabin"
+                android:hint="Search..."
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_8sdp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white"
+                android:textColorHint="#7EFFFDFD"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="btn_close"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_close" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noItemInCompanyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coming Soon...!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <Button
+                android:id="@+id/btn_ContinueShopping"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:onClick="btn_ContinueShopping"
+                android:padding="@dimen/_8sdp"
+                android:text="Continue Shopping"
+                android:textAllCaps="false"
+                android:textColor="@color/secondary"
+                app:backgroundTint="@color/secondaryLite"
+                app:elevation="@dimen/_5sdp"
+                app:rippleColor="@color/secondary"
+                app:strokeColor="@color/secondary"
+                app:strokeWidth="0.6dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/companyListRcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@color/white" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <RelativeLayout
+        android:id="@+id/lay_membership"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:id="@+id/lay_glowingBtn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:alpha="0.1"
+            android:background="@drawable/gradient_offer_button">
+            <!--    android:background="#FFC107">
+            android:backgroundTint="@color/secondary">-->
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:background="@drawable/gradient_offer_button"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:onClick="lay_UpgradeMembership"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:src="@drawable/ic_discountoffer" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="center"
+                android:text="Buy membership to get unlimited discounts."
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:src="@drawable/ic_nextpage"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+
+        <!-- <Button
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_marginBottom="@dimen/_4sdp"
+             android:background="@drawable/gradient_bg_style"
+             android:paddingVertical="@dimen/_9sdp"
+             android:text="Update membership to get unlimited discounts"
+             android:textColor="@color/white"
+             app:elevation="@dimen/_5sdp"
+             app:icon="@drawable/ic_up_arrow"
+             app:iconTint="@color/primary"
+             app:rippleColor="@color/primary"
+             app:strokeColor="@color/primary"
+             app:strokeWidth="0.5dp" />-->
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

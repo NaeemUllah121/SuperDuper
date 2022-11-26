@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg_style"
+    android:orientation="vertical"
+    tools:context=".WasteMaterialRequestSubmit.SaveEarthActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/parentLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <!--<ImageView
+                android:id="@+id/btn_backCart"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="btn_back"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btn_back"/>-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="btn_back"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btn_back" />
+
+            <TextView
+                android:id="@+id/house_header_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/cabin"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Scan &amp; Gain"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="invisible">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="btn_MRequestHistory"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_history"
+                app:tint="@color/white">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/layText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lay1"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/cabin"
+            android:gravity="center"
+            android:text="Save Earth Initiative"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/layPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layText"
+            android:layout_centerHorizontal="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Your Points"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/totalPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <!--  <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="bottom"
+                  android:src="@drawable/ic_coins"
+                  android:textColor="@color/white"
+                  app:tint="@color/white" />-->
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_120sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:onClick="btn_ScanMore"
+            android:text="Scan More"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_add"
+            app:iconSize="@dimen/_15sdp"
+            app:iconTint="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/lay2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lay1"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:background="@drawable/language_top_round_style">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_scanGain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/lay_placeOrder"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="3dp" />
+            android:layout_below="@+id/lay4"
+
+
+            <LinearLayout
+                android:id="@+id/lay_placeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/lay_placeOrderr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="2">android:background="#0F3F51B5"
+
+                    <!--
+                                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                                            android:id="@+id/addSale"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="@dimen/_8sdp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/primary"
+                                            android:onClick="btn_AddItem"
+                                            android:text="Add More"
+                                            android:textColor="@color/white"
+                                            app:icon="@drawable/ic_add"
+                                            app:iconSize="@dimen/_15sdp"
+                                            app:iconTint="@color/white" />-->
+
+                    <!--
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:onClick="btn_ScanMore"
+                        android:paddingVertical="@dimen/_9sdp"
+                        android:text="Scan More"
+                        android:textColor="@color/primary"
+                        app:backgroundTint="#17FE5722"
+                        app:elevation="@dimen/_5sdp"
+                        app:icon="@drawable/ic_morre"
+                        app:iconSize="@dimen/_12sdp"
+                        app:iconTint="@color/primary"
+                        app:rippleColor="@color/primary"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="0.5dp" />
+-->
+
+
+                    <!--<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/primary"
+                        android:onClick="btn_AddItem"
+                        android:text="Submit Request"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_ok"
+                        app:iconSize="@dimen/_15sdp"
+                        app:iconTint="@color/white" />-->
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="@dimen/_4sdp"
+                        android:layout_marginVertical="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:onClick="btn_SubmitRequest"
+                        android:paddingVertical="@dimen/_9sdp"
+                        android:text="Submit Request"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/primary"
+                        app:elevation="@dimen/_5sdp"
+                        app:icon="@drawable/ic_up_arrow"
+                        app:iconTint="@color/white"
+                        app:rippleColor="@color/primary"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="0.5dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <!--  <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <RelativeLayout
+              android:id="@+id/lay1"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              android:background="@color/secondary">
+
+              <ImageView
+                  android:id="@+id/btn_backCart"
+                  android:layout_width="@dimen/_40sdp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentStart="true"
+                  android:layout_centerVertical="true"
+                  android:onClick="btn_back_cart"
+                  android:scaleType="fitCenter"
+                  android:src="@drawable/ic_btn_back">
+
+              </ImageView>
+
+              <TextView
+                  android:id="@+id/house_header_detail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_centerInParent="true"
+                  android:fontFamily="@font/cabin"
+                  android:gravity="center"
+                  android:maxLines="1"
+                  android:text="Scan &amp; Gain"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                  android:textColor="@color/white"
+                  android:textStyle="bold">
+
+              </TextView>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:id="@+id/lay2"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_below="@+id/lay1">
+
+
+              <androidx.cardview.widget.CardView
+                  android:id="@+id/lay3"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:cardCornerRadius="@dimen/_4sdp"
+                  app:cardElevation="@dimen/_1sdp"
+                  app:cardUseCompatPadding="true">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentTop="true"
+                      android:gravity="center_vertical"
+                      android:paddingVertical="@dimen/_4sdp"
+                      android:paddingStart="@dimen/_2sdp"
+                      android:weightSum="7">android:layout_marginHorizontal="@dimen/_6sdp"
+
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_weight="3"
+                          android:gravity="center_vertical"
+                          android:paddingStart="2dp"
+                          android:paddingTop="3dp"
+                          android:paddingEnd="4dp"
+                          android:paddingBottom="3dp"
+                          android:text="Product"
+                          android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                          android:textColor="@color/black"
+                          android:textStyle="bold"
+                          app:autoSizeMaxTextSize="18sp"
+                          app:autoSizeMinTextSize="11sp"
+                          app:autoSizeStepGranularity="2sp"
+                          app:autoSizeTextType="uniform" />
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical"
+                          android:layout_weight="1.5"
+                          android:paddingTop="3dp"
+                          android:paddingEnd="4dp"
+                          android:gravity="start"
+                          android:paddingBottom="3dp"
+                          android:text="Points"
+                          android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                          android:textColor="@color/black"
+                          android:textStyle="bold"
+                          app:autoSizeMaxTextSize="18sp"
+                          app:autoSizeMinTextSize="11sp"
+                          app:autoSizeStepGranularity="2sp"
+                          app:autoSizeTextType="uniform" />
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_gravity="center_vertical"
+                          android:layout_weight="2.5"
+                          android:gravity="center_vertical|end"
+                          android:paddingStart="2dp"
+                          android:paddingTop="3dp"
+                          android:paddingEnd="@dimen/_10sdp"
+                          android:paddingBottom="3dp"
+                          android:text="Qty"
+                          android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                          android:textColor="@color/black"
+                          android:textStyle="bold"
+                          app:autoSizeMaxTextSize="18sp"
+                          app:autoSizeMinTextSize="11sp"
+                          app:autoSizeStepGranularity="2sp"
+                          app:autoSizeTextType="uniform" />
+                  </LinearLayout>
+
+              </androidx.cardview.widget.CardView>
+
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recycler_scanGain"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_above="@+id/lay_placeOrder"
+                  android:layout_below="@id/lay3"
+                  android:layout_marginBottom="3dp" />
+              android:layout_below="@+id/lay4"
+
+
+              <LinearLayout
+                  android:id="@+id/lay_placeOrder"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical">
+
+
+              <LinearLayout
+                  android:id="@+id/lay"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/et_bg_style"
+                  android:paddingHorizontal="@dimen/_6sdp"
+                  android:layout_gravity="center_horizontal"
+                  android:orientation="horizontal">
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:fontFamily="sans-serif-condensed"
+                      android:gravity="center"
+                      android:padding="@dimen/_4sdp"
+                      android:text="Points"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                  <TextView
+                      android:id="@+id/totalPoints"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:fontFamily="sans-serif-condensed"
+                      android:gravity="center"
+                      android:padding="@dimen/_4sdp"
+                      android:text="0"
+                      android:textStyle="bold"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+              </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/lay_placeOrderr"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginHorizontal="@dimen/_2sdp"
+                      android:orientation="horizontal"
+                      android:weightSum="2">android:background="#0F3F51B5"
+
+                      &lt;!&ndash;
+                                          <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                                              android:id="@+id/addSale"
+                                              android:layout_width="0dp"
+                                              android:layout_height="wrap_content"
+                                              android:layout_marginBottom="@dimen/_8sdp"
+                                              android:layout_weight="1"
+                                              android:backgroundTint="@color/primary"
+                                              android:onClick="btn_AddItem"
+                                              android:text="Add More"
+                                              android:textColor="@color/white"
+                                              app:icon="@drawable/ic_add"
+                                              app:iconSize="@dimen/_15sdp"
+                                              app:iconTint="@color/white" />&ndash;&gt;
+
+                      <Button
+                          style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginHorizontal="@dimen/_4sdp"
+                          android:layout_marginBottom="@dimen/_4sdp"
+                          android:layout_weight="1"
+                          android:onClick="btn_ScanMore"
+                          android:paddingVertical="@dimen/_9sdp"
+                          android:text="Scan More"
+                          android:textColor="@color/primary"
+                          app:backgroundTint="#17FE5722"
+                          app:elevation="@dimen/_5sdp"
+                          app:icon="@drawable/ic_morre"
+                          app:iconSize="@dimen/_12sdp"
+                          app:iconTint="@color/primary"
+                          app:rippleColor="@color/primary"
+                          app:strokeColor="@color/primary"
+                          app:strokeWidth="0.5dp" />
+
+
+                      &lt;!&ndash;<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="@dimen/_8sdp"
+                          android:layout_weight="1"
+                          android:backgroundTint="@color/primary"
+                          android:onClick="btn_AddItem"
+                          android:text="Submit Request"
+                          android:textColor="@color/white"
+                          app:icon="@drawable/ic_ok"
+                          app:iconSize="@dimen/_15sdp"
+                          app:iconTint="@color/white" />&ndash;&gt;
+
+                      <Button
+                          style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginHorizontal="@dimen/_4sdp"
+                          android:layout_marginBottom="@dimen/_4sdp"
+                          android:layout_weight="1"
+                          android:onClick="btn_SubmitRequest"
+                          android:paddingVertical="@dimen/_9sdp"
+                          android:text="Submit Request"
+                          android:textColor="@color/primary"
+                          app:backgroundTint="#17FE5722"
+                          app:elevation="@dimen/_5sdp"
+                          app:iconSize="@dimen/_12sdp"
+                          app:icon="@drawable/ic_up_arrow"
+                          app:iconTint="@color/primary"
+                          app:rippleColor="@color/primary"
+                          app:strokeColor="@color/primary"
+                          app:strokeWidth="0.5dp" />
+
+                  </LinearLayout>
+
+
+              </LinearLayout>
+
+          </RelativeLayout>
+
+
+      </RelativeLayout>-->
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

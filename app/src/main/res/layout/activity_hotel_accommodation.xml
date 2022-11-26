@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lb_splash_bg"
+    android:orientation="vertical"
+    tools:context=".HotelAccommodation.HotelAccommodationActivity">
+
+    <RelativeLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/secondary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="btn_back"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_btn_back"
+            app:tint="@color/white" />
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:onClick="btn_back"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_btn_back" />-->
+
+        <TextView
+            android:id="@+id/lay_header"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Accommodation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_membership"
+        android:layout_below="@+id/lay1"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="For your next stay"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Search here hotels, guest houses and much more..."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/gray" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_selectCity"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:hint="City"
+                        app:boxBackgroundColor="@color/grayLite"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_buildings"
+                        app:startIconTint="@color/primary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/selectCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_selectArea"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:hint="Area"
+                        app:boxBackgroundColor="@color/grayLite"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_buildings"
+                        app:startIconTint="@color/primary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/selectArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_selectCategory"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:hint="Category"
+                        app:boxBackgroundColor="@color/grayLite"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_category"
+                        app:startIconTint="@color/primary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/selectCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="100"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--  <com.google.android.material.textfield.TextInputLayout
+                          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="bottom"
+                          android:layout_marginTop="@dimen/_10sdp"
+                          android:hint="Parcel Pickup Date/Time"
+                          app:boxBackgroundColor="#EDF2FD"
+                          app:boxCornerRadiusBottomEnd="6dp"
+                          app:boxCornerRadiusBottomStart="6dp"
+                          app:boxCornerRadiusTopEnd="6dp"
+                          app:boxCornerRadiusTopStart="6dp"
+                          app:boxStrokeColor="@color/black"
+                          app:boxStrokeWidth="0dp"
+                          app:boxStrokeWidthFocused="0dp"
+                          app:endIconMode="dropdown_menu"
+                          app:endIconTint="@color/black"
+                          app:hintTextColor="@color/black"
+                          app:startIconDrawable="@drawable/ic_date"
+                          app:startIconTint="@color/secondary">
+
+                          <AutoCompleteTextView
+                              android:id="@+id/tv_ParcelPickupDate"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:inputType="none" />
+
+                      </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:hint="Check-in Date"
+                            android:maxLines="1"
+                            app:boxBackgroundColor="@color/grayLite"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="dropdown_menu"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_date"
+                            app:startIconTint="@color/primary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tv_CheckinDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:inputType="none"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:hint="Check-out Date"
+                            app:boxBackgroundColor="@color/grayLite"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="dropdown_menu"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_date"
+                            app:startIconTint="@color/primary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tv_CheckoutDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:inputType="none"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Adults"
+                            app:boxBackgroundColor="@color/grayLite"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_gender"
+                            app:startIconTint="@color/primary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_Adults"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform"
+                                android:textColorHint="#72000000" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:hint="Children"
+                            app:boxBackgroundColor="@color/grayLite"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_gender"
+                            app:startIconTint="@color/primary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_Children"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform"
+                                android:textColorHint="#72000000" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Rooms"
+                            app:boxBackgroundColor="@color/grayLite"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_bed"
+                            app:startIconTint="@color/primary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_Rooms"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform"
+                                android:textColorHint="#72000000" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <CheckBox
+                        android:id="@+id/check_box"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/primary"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="I'm travelling for work"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:backgroundTint="@color/primary"
+                        android:onClick="btn_search"
+                        android:padding="@dimen/_8sdp"
+                        android:text="SEARCH"
+                        android:textColor="@color/white"
+                        app:rippleColor="@color/primary"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="0.5dp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--    <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="For your next stay"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Search here hotels, guest houses and much more..."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/gray" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_selectCity"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:hint="City"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_buildings"
+                        app:startIconTint="@color/secondary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/selectCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_selectArea"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:hint="Area"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_buildings"
+                        app:startIconTint="@color/secondary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/selectArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_selectCategory"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:hint="Category"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_category"
+                        app:startIconTint="@color/secondary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/selectCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="100"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    &lt;!&ndash;  <com.google.android.material.textfield.TextInputLayout
+                          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="bottom"
+                          android:layout_marginTop="@dimen/_10sdp"
+                          android:hint="Parcel Pickup Date/Time"
+                          app:boxBackgroundColor="#EDF2FD"
+                          app:boxCornerRadiusBottomEnd="6dp"
+                          app:boxCornerRadiusBottomStart="6dp"
+                          app:boxCornerRadiusTopEnd="6dp"
+                          app:boxCornerRadiusTopStart="6dp"
+                          app:boxStrokeColor="@color/black"
+                          app:boxStrokeWidth="0dp"
+                          app:boxStrokeWidthFocused="0dp"
+                          app:endIconMode="dropdown_menu"
+                          app:endIconTint="@color/black"
+                          app:hintTextColor="@color/black"
+                          app:startIconDrawable="@drawable/ic_date"
+                          app:startIconTint="@color/secondary">
+
+                          <AutoCompleteTextView
+                              android:id="@+id/tv_ParcelPickupDate"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:inputType="none" />
+
+                      </com.google.android.material.textfield.TextInputLayout>&ndash;&gt;
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:hint="Check-in Date"
+                            android:maxLines="1"
+                            app:boxBackgroundColor="#EDF2FD"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="dropdown_menu"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_date"
+                            app:startIconTint="@color/secondary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tv_CheckinDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:inputType="none"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:hint="Check-out Date"
+                            app:boxBackgroundColor="#EDF2FD"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="dropdown_menu"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_date"
+                            app:startIconTint="@color/secondary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tv_CheckoutDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:inputType="none"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Adults"
+                            app:boxBackgroundColor="#EDF2FD"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_gender"
+                            app:startIconTint="@color/secondary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_Adults"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform"
+                                android:textColorHint="#72000000" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:hint="Children"
+                            app:boxBackgroundColor="#EDF2FD"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_gender"
+                            app:startIconTint="@color/secondary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_Children"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform"
+                                android:textColorHint="#72000000" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Rooms"
+                            app:boxBackgroundColor="#EDF2FD"
+                            app:boxCornerRadiusBottomEnd="6dp"
+                            app:boxCornerRadiusBottomStart="6dp"
+                            app:boxCornerRadiusTopEnd="6dp"
+                            app:boxCornerRadiusTopStart="6dp"
+                            app:boxStrokeColor="@color/black"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text"
+                            app:endIconTint="@color/black"
+                            app:hintTextColor="@color/black"
+                            app:startIconDrawable="@drawable/ic_bed"
+                            app:startIconTint="@color/secondary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_Rooms"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:autoSizeStepGranularity="2sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                app:autoSizeTextType="uniform"
+                                android:textColorHint="#72000000" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <CheckBox
+                        android:id="@+id/check_box"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/primary"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="I'm travelling for work"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:backgroundTint="@color/primary"
+                        android:onClick="btn_search"
+                        android:padding="@dimen/_8sdp"
+                        android:text="SEARCH"
+                        android:textColor="@color/white"
+                        app:rippleColor="@color/primary"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="0.5dp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/lay_membership"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:id="@+id/lay_glowingBtn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:alpha="0.1"
+            android:background="@drawable/gradient_offer_button">
+            <!--    android:background="#FFC107">
+            android:backgroundTint="@color/secondary">-->
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:background="@drawable/gradient_offer_button"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:onClick="lay_UpgradeMembership"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:src="@drawable/ic_discountoffer" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="center"
+                android:text="Buy membership to get unlimited discounts."
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:src="@drawable/ic_nextpage"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+
+        <!-- <Button
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_marginBottom="@dimen/_4sdp"
+             android:background="@drawable/gradient_bg_style"
+             android:paddingVertical="@dimen/_9sdp"
+             android:text="Update membership to get unlimited discounts"
+             android:textColor="@color/white"
+             app:elevation="@dimen/_5sdp"
+             app:icon="@drawable/ic_up_arrow"
+             app:iconTint="@color/primary"
+             app:rippleColor="@color/primary"
+             app:strokeColor="@color/primary"
+             app:strokeWidth="0.5dp" />-->
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

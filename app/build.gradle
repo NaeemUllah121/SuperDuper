@@ -1,0 +1,142 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.zasa.superduper"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 2
+        versionName "1.03"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+    ////for google mail api
+    packagingOptions {
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/LICENSE.md'
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    ///Spinner Dialog
+    //implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    implementation 'com.github.MdFarhanRaja:SearchableSpinner:2.0'
+
+
+    ////circular image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //image slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
+    //why not image slider
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    ///generate QR and barCode
+   // implementation 'com.google.zxing:core:3.2.1'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
+
+    /////retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //ssp and sdp
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //youtube player library
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    //implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
+    implementation files('libs/YoutubeAndroidPlayerApi.jar')
+
+    //rcv swipe to delete
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+
+    //rating bar
+    implementation 'com.github.ome450901:SimpleRatingBar:1.5.1'
+    implementation 'com.github.fuzz-productions:RatingBar:1.0.6'
+
+    //QR
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+
+    //in App update
+    implementation 'com.google.android.play:core:1.10.3'
+
+    //animated custom dialog
+    implementation 'com.bestsoft32.tayyab:tt-fancy-gif-dialog:1.0.2'
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.2'
+
+    //FOR AdMode
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'
+
+    //date time picker
+    implementation 'com.github.pwiniars:SlideDateTimePicker:1.0.8'
+    //also add  maven { url 'https://jitpack.io' }
+
+    ///custom RadioRealButton
+    //implementation 'com.github.ceryle:RadioRealButton:v1.3'
+
+    //image picker
+    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
+    // implementation 'com.itextpdf:itextg:5.5.10'
+
+    ///read more textview
+    implementation 'kr.co.prnd:readmore-textview:1.0.0'
+
+    //custom toast
+    //implementation 'com.github.mojjtaba:CuToast-Android:0.2.0'
+    //maven { url "https://jitpack.io" }
+
+    //loading button
+    implementation 'com.github.StevenDXC:DxLoadingButton:2.4'
+    //maven { url "https://jitpack.io" }
+
+    /////send email from app without intent
+    implementation 'com.sun.mail:android-mail:1.6.6'
+    implementation 'com.sun.mail:android-activation:1.6.6'
+
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+}

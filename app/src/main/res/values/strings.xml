@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SuperDuper</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="items">
+        <item>-Select a Question-</item>
+        <item>Your nick name</item>
+        <item>Your best friend name</item>
+        <item>your first pet name</item>
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    <string name="AdMod_app_id">ca-app-pub-6877048627933487~5497215247</string>-->
+    <!--    <string name="adUnitIdHome">ca-app-pub-6877048627933487/8035470407</string>-->
+    <!--    <string name="adUnitIdDakiya">ca-app-pub-6877048627933487/8662721015</string> -->
+
+
+    <string name="AdMod_app_id">ca-app-pub-6877048627933487~3389045087</string>
+    <string name="adUnitIdHome">ca-app-pub-6877048627933487/1673526788</string>
+    <string name="adUnitIdDakiya">ca-app-pub-6877048627933487/4108118430</string>
+
+
+</resources>
+

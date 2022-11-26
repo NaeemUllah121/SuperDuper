@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--   <TextView
+           android:id="@+id/parent_item_title"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="@dimen/_8sdp"
+           android:text="Item Title"
+           android:fontFamily="sans-serif-condensed-light"
+           android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+           android:textStyle="bold"
+           android:textColor="@color/black"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="@dimen/_8sdp"
+           android:orientation="horizontal">
+
+           &lt;!&ndash;Child RecyclerView&ndash;&gt;
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/child_recyclerview"
+               android:layout_width="match_parent"
+               android:layout_marginHorizontal="@dimen/_7sdp"
+               android:layout_height="wrap_content" />
+       </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_6sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:background="@drawable/style_parent_item_round_right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/parent_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:gravity="center"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/child_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_6sdp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CourierService.DakiyaActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secondary"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="btn_back"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btn_back"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_header_detail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:fontFamily="@font/cabin"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Dakiya"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/btn_deliveryHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="btn_deliveryHistory"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_history"
+                app:tint="@color/white" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/_8sdp"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:visibility="gone"-->
+        <!--            android:paddingHorizontal="@dimen/_8sdp">-->
+
+        <!--            <co.ceryle.radiorealbutton.library.RadioRealButtonGroup-->
+        <!--                android:id="@+id/group"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                app:rrbg_animateImages_enter="overshoot"-->
+        <!--                app:rrbg_animateTexts_enter="overshoot"-->
+        <!--                app:rrbg_animateSelector="anticipateOvershoot"-->
+        <!--                app:rrbg_bottomLineSize="0dp"-->
+        <!--                app:rrbg_dividerColor="@color/black"-->
+        <!--                app:rrbg_dividerSize="1dp"-->
+        <!--                app:rrbg_radius="5dp"-->
+        <!--                app:rrbg_selectorColor="@color/primary"-->
+        <!--                app:rrbg_selectorSize="4dp"-->
+        <!--                app:rrbg_shadow="true"-->
+        <!--                app:rrbg_shadowElevation="2dp"-->
+        <!--                app:rrbg_shadowMargin="2dp">-->
+
+        <!--                <co.ceryle.radiorealbutton.library.RadioRealButton-->
+        <!--                    android:id="@+id/button1"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    app:rrb_imageHeight="33dp"-->
+        <!--                    app:rrb_imageWidth="33dp"-->
+        <!--                    app:rrb_ripple="true"-->
+        <!--                    app:rrb_rippleColor="@color/gray"-->
+        <!--                    app:rrb_text="Parcel Delivery"-->
+        <!--                    app:rrb_textColor="@color/secondary" />-->
+        <!--                app:rrb_image="@mipmap/ic_launcher"-->
+
+
+        <!--                <co.ceryle.radiorealbutton.library.RadioRealButton-->
+        <!--                    android:id="@+id/button2"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    app:rrb_imageHeight="33dp"-->
+        <!--                    app:rrb_imageWidth="33dp"-->
+        <!--                    app:rrb_ripple="true"-->
+        <!--                    app:rrb_rippleColor="@color/gray"-->
+        <!--                    app:rrb_text="Donation Status"-->
+        <!--                    app:rrb_textColor="@color/secondary" />-->
+        <!--                app:rrb_image="@mipmap/ic_launcher"-->
+
+        <!--            </co.ceryle.radiorealbutton.library.RadioRealButtonGroup>-->
+        <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:scrollbars="none">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                &lt;!&ndash;Donation status view&ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/lay_donation"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/cardView"-->
+<!--                        style="@style/Widget.MaterialComponents.CardView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:onClick="expandableView"-->
+<!--                        app:cardCornerRadius="@dimen/_4sdp"-->
+<!--                        app:cardElevation="@dimen/_2sdp"-->
+<!--                        app:cardUseCompatPadding="true">android:layout_marginTop="@dimen/_10sdp"-->
+
+
+<!--                        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                            android:id="@+id/lay"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginHorizontal="@dimen/_4sdp"-->
+<!--                            android:layout_marginVertical="@dimen/_10sdp"-->
+<!--                            android:animateLayoutChanges="true"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <RelativeLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:gravity="center">-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tv_faqTitle"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerVertical="true"-->
+<!--                                    android:layout_marginStart="@dimen/_4sdp"-->
+<!--                                    android:fontFamily="@font/nunito_bold"-->
+<!--                                    android:gravity="center_vertical"-->
+<!--                                    android:text="Donation Status"-->
+<!--                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"-->
+<!--                                    android:textColor="@color/black" />-->
+
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/iv_expandView"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:scaleType="fitCenter"-->
+<!--                                    android:src="@drawable/ic_expand_more" />-->
+<!--                            </RelativeLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:id="@+id/lay_expandableView"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="vertical">android:visibility="gone"-->
+
+<!--                                <RadioGroup-->
+<!--                                    android:id="@+id/RG_DonationStatus"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:orientation="horizontal">-->
+
+<!--                                    <RadioButton-->
+<!--                                        android:id="@+id/rb_Cnic"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_marginEnd="@dimen/_10sdp"-->
+<!--                                        android:buttonTint="@color/secondary"-->
+<!--                                        android:checked="true"-->
+<!--                                        android:text="CNIC"-->
+<!--                                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />-->
+
+<!--                                    <RadioButton-->
+<!--                                        android:id="@+id/rb_VoucherId"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:buttonTint="@color/secondary"-->
+<!--                                        android:text="Voucher ID" />-->
+
+<!--                                </RadioGroup>-->
+
+<!--                                &lt;!&ndash;<com.google.android.material.textfield.TextInputLayout-->
+<!--                                              style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"-->
+<!--                                              android:layout_width="match_parent"-->
+<!--                                              android:layout_height="wrap_content"-->
+<!--                                              android:layout_gravity="bottom"-->
+<!--                                              android:layout_marginTop="@dimen/_10sdp"-->
+<!--                                              android:hint="Select Foundation"-->
+<!--                                              app:boxBackgroundColor="#EDF2FD"-->
+<!--                                              app:boxCornerRadiusBottomEnd="6dp"-->
+<!--                                              app:boxCornerRadiusBottomStart="6dp"-->
+<!--                                              app:boxCornerRadiusTopEnd="6dp"-->
+<!--                                              app:boxCornerRadiusTopStart="6dp"-->
+<!--                                              app:boxStrokeColor="@color/black"-->
+<!--                                              app:boxStrokeWidth="0dp"-->
+<!--                                              app:boxStrokeWidthFocused="0dp"-->
+<!--                                              app:endIconMode="dropdown_menu"-->
+<!--                                              app:endIconTint="@color/black"-->
+<!--                                              app:hintTextColor="@color/black"-->
+<!--                                              app:startIconTint="@color/black">-->
+
+<!--                                              <AutoCompleteTextView-->
+<!--                                                  android:id="@+id/et_SelectConstituency"-->
+<!--                                                  android:layout_width="match_parent"-->
+<!--                                                  android:layout_height="wrap_content"-->
+<!--                                                  android:inputType="none" />-->
+
+<!--                                          </com.google.android.material.textfield.TextInputLayout>&ndash;&gt;-->
+
+<!--                                <com.google.android.material.textfield.TextInputLayout-->
+<!--                                    android:id="@+id/lay_CNICDonation"-->
+<!--                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginHorizontal="@dimen/_4sdp"-->
+<!--                                    android:hint="CNIC"-->
+<!--                                    app:boxBackgroundColor="#EDF2FD"-->
+<!--                                    app:boxCornerRadiusBottomEnd="6dp"-->
+<!--                                    app:boxCornerRadiusBottomStart="6dp"-->
+<!--                                    app:boxCornerRadiusTopEnd="6dp"-->
+<!--                                    app:boxCornerRadiusTopStart="6dp"-->
+<!--                                    app:boxStrokeColor="@color/black"-->
+<!--                                    app:boxStrokeWidth="0dp"-->
+<!--                                    app:boxStrokeWidthFocused="0dp"-->
+<!--                                    app:endIconMode="clear_text"-->
+<!--                                    app:endIconTint="@color/black"-->
+<!--                                    app:hintTextColor="@color/black"-->
+<!--                                    app:startIconDrawable="@drawable/ic_id"-->
+<!--                                    app:startIconTint="@color/secondary">-->
+
+<!--                                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                                        android:id="@+id/et_CNICDonation"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:inputType="number"-->
+<!--                                        android:maxLength="15"-->
+<!--                                        android:textColor="@color/black"-->
+<!--                                        android:textColorHint="#72000000" />-->
+
+<!--                                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                                <com.google.android.material.textfield.TextInputLayout-->
+<!--                                    android:id="@+id/lay_VoucherIdDonation"-->
+<!--                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginHorizontal="@dimen/_4sdp"-->
+<!--                                    android:layout_marginTop="@dimen/_4sdp"-->
+<!--                                    android:hint="Voucher Id"-->
+<!--                                    android:visibility="gone"-->
+<!--                                    app:boxBackgroundColor="#EDF2FD"-->
+<!--                                    app:boxCornerRadiusBottomEnd="6dp"-->
+<!--                                    app:boxCornerRadiusBottomStart="6dp"-->
+<!--                                    app:boxCornerRadiusTopEnd="6dp"-->
+<!--                                    app:boxCornerRadiusTopStart="6dp"-->
+<!--                                    app:boxStrokeColor="@color/black"-->
+<!--                                    app:boxStrokeWidth="0dp"-->
+<!--                                    app:boxStrokeWidthFocused="0dp"-->
+<!--                                    app:endIconMode="clear_text"-->
+<!--                                    app:endIconTint="@color/black"-->
+<!--                                    app:hintTextColor="@color/black"-->
+<!--                                    app:startIconDrawable="@drawable/ic_id"-->
+<!--                                    app:startIconTint="@color/secondary">-->
+
+<!--                                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                                        android:id="@+id/et_VoucherIdDonation"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:inputType="text"-->
+<!--                                        android:textColor="@color/black"-->
+<!--                                        android:textColorHint="#72000000" />-->
+
+<!--                                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                                <Button-->
+<!--                                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"-->
+<!--                                    android:layout_width="@dimen/_180sdp"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_gravity="center_horizontal"-->
+<!--                                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                                    android:backgroundTint="@color/primary"-->
+<!--                                    android:padding="@dimen/_8sdp"-->
+<!--                                    android:text="Submit"-->
+<!--                                    android:textColor="@color/white"-->
+<!--                                    app:rippleColor="@color/primary"-->
+<!--                                    app:strokeColor="@color/primary"-->
+<!--                                    app:strokeWidth="0.5dp" />-->
+<!--                            </LinearLayout>-->
+
+
+<!--                        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                </LinearLayout>-->
+
+
+                <LinearLayout
+                    android:id="@+id/lay_Parceldelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Sender Details"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_marginHorizontal="@dimen/_50sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="#c0c0c0" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Name"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_user"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/SenderName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Mobile"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_phone"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/SenderMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="CNIC"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_id"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/SenderCNIC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Address"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_location"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/SenderAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:hint="Parcel Pickup Date/Time"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_date"
+                        app:startIconTint="@color/secondary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tv_ParcelPickupDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--   <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="@dimen/_45sdp"
+                           android:layout_marginTop="10dp"
+                           android:background="@drawable/style_et_bg"
+                           android:gravity="center_vertical"
+                           android:orientation="horizontal">
+
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_vertical"
+                               android:layout_marginStart="@dimen/_14sdp"
+                               android:src="@drawable/ic_date"
+                               app:tint="@color/secondary" />
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="@dimen/_14sdp"
+                               android:orientation="vertical">
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:gravity="center_vertical"
+                                   android:hint="Parcel Pickup Date/Time"
+                                   android:textColorHint="#9A000000"
+                                   android:textSize="@dimen/_9ssp" />
+
+                               <TextView
+                                   android:id="@+id/tv_ParcelPickupDate"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="center_vertical"
+                                   android:layout_marginTop="@dimen/_2sdp"
+                                   android:drawableRight="@drawable/ic_spinner_icon"
+                                   android:gravity="center_vertical"
+                                   android:hint="..."
+                                   android:paddingEnd="@dimen/_10sdp"
+                                   android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                   android:textColor="@color/black"
+                                   android:textColorHint="#9A000000" />
+
+                           </LinearLayout>
+
+                           &lt;!&ndash;  <TextView
+                                 android:id="@+id/tv_paymentOptions"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/_40sdp"
+                                 android:layout_gravity="center"
+                                 android:layout_marginStart="@dimen/_14sdp"
+                                 android:drawableRight="@drawable/ic_spinner"
+                                 android:gravity="center_vertical"
+                                 android:hint="Payment Options"
+                                 android:paddingEnd="@dimen/_4sdp"
+                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                 android:textColor="@color/black"
+                                 android:textColorHint="#9A000000" />&ndash;&gt;
+                       </LinearLayout>-->
+
+                    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/adUnitIdDakiya" />
+                    ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Parcel Details"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_marginHorizontal="@dimen/_50sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="#c0c0c0" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:hint="Parcel Type"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_parcel"
+                        app:startIconTint="@color/secondary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tv_Parcel_Type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/style_et_bg"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:src="@drawable/ic_parcel"
+                                app:tint="@color/secondary" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:hint="Parcel Type"
+                                    android:textColorHint="#9A000000"
+                                    android:textSize="@dimen/_9ssp" />
+
+                                <TextView
+                                    android:id="@+id/tv_Parcel_Type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:drawableRight="@drawable/ic_spinner_icon"
+                                    android:gravity="center_vertical"
+                                    android:hint="..."
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="#9A000000" />
+
+                            </LinearLayout>
+
+                            &lt;!&ndash;  <TextView
+                                  android:id="@+id/tv_paymentOptions"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="@dimen/_40sdp"
+                                  android:layout_gravity="center"
+                                  android:layout_marginStart="@dimen/_14sdp"
+                                  android:drawableRight="@drawable/ic_spinner"
+                                  android:gravity="center_vertical"
+                                  android:hint="Payment Options"
+                                  android:paddingEnd="@dimen/_4sdp"
+                                  android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                  android:textColor="@color/black"
+                                  android:textColorHint="#9A000000" />&ndash;&gt;
+                        </LinearLayout>-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:hint="Delivery Type"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="dropdown_menu"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_deliverytype"
+                        app:startIconTint="@color/secondary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tv_delivery_Type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--   <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="@dimen/_45sdp"
+                           android:layout_marginTop="10dp"
+                           android:background="@drawable/style_et_bg"
+                           android:gravity="center_vertical"
+                           android:orientation="horizontal">
+
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_vertical"
+                               android:layout_marginStart="@dimen/_14sdp"
+                               android:src="@drawable/ic_deliverytype"
+                               app:tint="@color/secondary" />
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="@dimen/_14sdp"
+                               android:orientation="vertical">
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:gravity="center_vertical"
+                                   android:hint="Delivery Type"
+                                   android:textColorHint="#9A000000"
+                                   android:textSize="@dimen/_9ssp" />
+
+                               <TextView
+                                   android:id="@+id/tv_delivery_Type"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="center_vertical"
+                                   android:layout_marginTop="@dimen/_2sdp"
+                                   android:drawableRight="@drawable/ic_spinner_icon"
+                                   android:gravity="center_vertical"
+                                   android:hint="..."
+                                   android:paddingEnd="@dimen/_10sdp"
+                                   android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                   android:textColor="@color/black"
+                                   android:textColorHint="#9A000000" />
+
+                           </LinearLayout>
+
+
+                       </LinearLayout>-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="NO. of Parcel"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_addparcel"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_NOofparcel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Note"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_edit"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Recipient Details"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_marginHorizontal="@dimen/_50sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="#c0c0c0" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Name"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_user"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/RecipientName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Mobile"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_phone"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/RecipientMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Address"
+                        app:boxBackgroundColor="#EDF2FD"
+                        app:boxCornerRadiusBottomEnd="6dp"
+                        app:boxCornerRadiusBottomStart="6dp"
+                        app:boxCornerRadiusTopEnd="6dp"
+                        app:boxCornerRadiusTopStart="6dp"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        app:startIconDrawable="@drawable/ic_location"
+                        app:startIconTint="@color/secondary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/RecipientAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="#72000000" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/style_et_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:src="@drawable/ic_date"
+                            app:tint="@color/secondary" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:hint="Date &amp; Time"
+                                android:textColorHint="#9A000000"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <TextView
+                                android:id="@+id/tv_ParcelDeliverDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:drawableRight="@drawable/ic_spinner_icon"
+                                android:gravity="center_vertical"
+                                android:hint="Parcel deliver date..."
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/black"
+                                android:textColorHint="#9A000000" />
+
+                        </LinearLayout>
+
+                        <!--  <TextView
+                              android:id="@+id/tv_paymentOptions"
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/_40sdp"
+                              android:layout_gravity="center"
+                              android:layout_marginStart="@dimen/_14sdp"
+                              android:drawableRight="@drawable/ic_spinner"
+                              android:gravity="center_vertical"
+                              android:hint="Payment Options"
+                              android:paddingEnd="@dimen/_4sdp"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                              android:textColor="@color/black"
+                              android:textColorHint="#9A000000" />-->
+                    </LinearLayout>
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:backgroundTint="@color/primary"
+                        android:onClick="btn_submitDeliveryReq"
+                        android:padding="@dimen/_8sdp"
+                        android:text="SUBMIT"
+                        android:textColor="@color/white"
+                        app:rippleColor="@color/primary"
+                        app:strokeColor="@color/primary"
+                        app:strokeWidth="0.5dp" />
+
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

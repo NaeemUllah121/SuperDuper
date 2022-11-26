@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:layout_marginTop="3dp"
+            app:cardUseCompatPadding="true"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/cardbg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:id="@+id/view_redeem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/view_homePoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="POINTS"
+                            android:fontFamily="@font/lato_bold"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_homePoints"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="7000.00"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/primary"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/view_homeCoupons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More You Spent"
+                            android:fontFamily="@font/lato_bold"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_homeCoupons"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="More You Win"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/primary"
+                            />
+
+                    </LinearLayout>
+
+
+                    <!--  <LinearLayout
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="4dp"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginBottom="4dp"
+                              android:text="POINTS"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                              android:textColor="@color/primary"
+                              android:textStyle="bold" />
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="COUPONS"
+                              android:textStyle="bold"
+                              android:textColor="@color/primary"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                              />
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="10dp"
+                          android:gravity="end"
+                          android:paddingEnd="@dimen/_10sdp"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:id="@+id/homePoints"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginBottom="4dp"
+                              android:fontFamily="sans-serif-condensed-medium"
+                              android:text="0"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                              android:textColor="@color/primary"
+                              android:textStyle="bold" />
+
+                          <TextView
+                              android:id="@+id/tv_coupons"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:fontFamily="sans-serif-condensed-medium"
+                              android:text="0"
+                              android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                              android:textColor="@color/primary"
+                              android:textStyle="bold" />
+
+                      </LinearLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_ClubName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Super Duper"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/primary"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_Club"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Club"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/primary"
+                            />
+
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/qrHome"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/homebarcode"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginHorizontal="15dp"-->
+                <!--                    android:layout_marginTop="@dimen/_14sdp"-->
+                <!--                    android:layout_marginBottom="@dimen/_6sdp"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    app:cardCornerRadius="15dp"-->
+                <!--                    app:cardElevation="5dp">-->
+
+
+                <!--                    <com.denzcoskun.imageslider.ImageSlider-->
+                <!--                        android:id="@+id/image_slider"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="@dimen/_155sdp"-->
+                <!--                        android:background="@color/white"-->
+                <!--                        android:elevation="200dp"-->
+                <!--                        app:iss_auto_cycle="true"-->
+                <!--                        app:iss_corner_radius="30"-->
+                <!--                        app:iss_delay="0"-->
+                <!--                        app:iss_period="1000" />-->
+                <!--                    app:iss_title_background="#00000000"-->
+
+
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:cardCornerRadius="15dp">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/imageSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:sliderAnimationDuration="900"
+                            app:sliderAutoCycleDirection="right"
+                            app:sliderAutoCycleEnabled="true"
+                            app:sliderIndicatorAnimationDuration="900"
+                            app:sliderIndicatorGravity="bottom|center"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="3dp"
+                            app:sliderIndicatorRadius="2dp"
+                            app:sliderIndicatorSelectedColor="@color/purple_700"
+                            app:sliderIndicatorUnselectedColor="@color/white"
+                            app:sliderScrollTimeInSec="1"
+                            app:sliderStartAutoCycle="true" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:background="#16000000" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp">
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Explore Categories"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/seeAllBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="@drawable/round_btn_style"
+                            android:backgroundTint="#19FE5722"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_2sdp"
+                            android:text="See All"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/secondary" />
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/CategoryRcv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="4dp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                android:layout_marginTop="4dp"
+                    android:background="#16000000" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_10sdp">
+
+                    <!-- <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="15dp"
+                         android:layout_marginBottom="6dp"
+                         android:fontFamily="sans-serif-medium"
+                         android:text="Top Deals"
+                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                         android:textColor="@color/black"
+                         android:textStyle="bold" />-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Top Discounts"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/seeAllTopBrandBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="@drawable/round_btn_style"
+                            android:backgroundTint="#19FE5722"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_2sdp"
+                            android:text="See All"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/secondary" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/topDiscounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+
+                        android:paddingHorizontal="4dp"
+                        android:layout_marginBottom="?attr/actionBarSize"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+    <!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+
+</FrameLayout>
